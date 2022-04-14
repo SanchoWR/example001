@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}{{ include('css/form.css') }}{% endblock %}
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+    <div class="reg-form-container">
+        <div class="reg-form-header">
+            <h2>Register</h2>
+        </div>
+        <div class="reg-form-body">
+            <form action="/register" id="register-form" method="post" class="reg-form">
+                <div class="container">
+                    <label for="login"><b>Login</b></label>
+                    <input id="login" type="text" name="login" placeholder="Enter Login" required>
+
+                    <label for="pass"><b>Password</b></label>
+                    <input id="pass" type="password" name="pass" placeholder="Enter Password" required>
+
+                    <label for="confirm_pass"><b>Confirm password</b></label>
+                    <input id="confirm_pass" type="password" name="confirm_pass" placeholder="Enter Password" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input id="email" type="text" name="email" placeholder="Enter Email" required>
+
+                    <label for="name"><b>Name</b></label>
+                    <input id="name" type="text" name="name" placeholder="Enter Name" required>
+
+                    <button type="submit" class="reg-btn">Register</button>
+
+                    <div class="reg">
+                        Already have an account?
+                        <a href="/login">Log in!</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        {{ include('js/functions/functions.js') }}
+        {{ include('js/page/register.js') }}
+    </script>
+{% endblock %}

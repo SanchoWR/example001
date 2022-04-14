@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.btn {
+    display: inline-block;
+    background: #8C959D;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 30px;
+    margin: 30px;
+}

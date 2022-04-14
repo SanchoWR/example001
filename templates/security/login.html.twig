@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}{{ include('css/form.css') }}{% endblock %}
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    {{ include('security/_login_form_layout.html.twig') }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        {{ include('js/functions/functions.js') }}
+        {{ include('js/page/index.js') }}
+    </script>
+{% endblock %}

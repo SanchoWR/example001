@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index Page{% endblock %}
+
+{% block body %}
+
+    <h1 id="hello"></h1>
+    <div id="logout"></div>
+    <div id="login"></div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        {{ include('js/functions/functions.js') }}
+        {{ include('js/page/index.js') }}
+    </script>
+{% endblock %}

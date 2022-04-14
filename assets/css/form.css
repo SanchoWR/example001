@@ -1,0 +1,54 @@
+.reg-form-container, .auth-form-container {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.reg-form-header, .auth-form-header {
+    text-align: center;
+}
+
+.container {
+    padding: 16px;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    border-radius: 6px;
+    background-color: aliceblue;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.reg {
+    padding-top: 10px;
+}
+
+.reg a {
+    color: darkcyan;
+}
+
+.error {
+    width: 100%;
+    font-size: 18px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    color: darkred;
+}
