@@ -1,5 +1,7 @@
 <?php
 
+$_SERVER['PATH_INFO'] = preg_replace("/^(\/[^?]*).*/", "$1", $_SERVER['REQUEST_URI']);
+
 use App\Http\Request;
 use App\Kernel;
 
