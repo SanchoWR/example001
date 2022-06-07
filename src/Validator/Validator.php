@@ -41,10 +41,10 @@ class Validator implements ValidatorInterface
             $errors[User::CONFIRM_PASSWORD] = $confirmPassword;
         }
 
-        $name = $this->validateName($newUser);
-        if (null !== $name) {
-            $errors[User::NAME] = $name;
-        }
+//        $name = $this->validateName($newUser);
+//        if (null !== $name) {
+//            $errors[User::NAME] = $name;
+//        }
 
         $email = $this->validateEmail($newUser);
         if (null !== $email) {
@@ -73,22 +73,22 @@ class Validator implements ValidatorInterface
         return null;
     }
 
-    private function validateName(User $newUser): ?string
-    {
-        if (empty($newUser->getName())) {
-            return 'Please enter your name';
-        }
-
-        if (!preg_match('/^[a-z]+$/i', $newUser->getName())) {
-            return 'Only letters';
-        }
-
-        if (2 !== strlen($newUser->getName())) {
-            return 'Two characters';
-        }
-
-        return null;
-    }
+//    private function validateName(User $newUser): ?string
+//    {
+//        if (empty($newUser->getName())) {
+//            return 'Please enter your name';
+//        }
+//
+//        if (!preg_match('/^[a-z]+$/i', $newUser->getName())) {
+//            return 'Only letters';
+//        }
+//
+//        if (2 !== strlen($newUser->getName())) {
+//            return 'Two characters';
+//        }
+//
+//        return null;
+//    }
 
     private function validateConfirmPassword(User $newUser): ?string
     {
