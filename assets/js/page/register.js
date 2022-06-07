@@ -89,9 +89,10 @@ function validate(form) {
     const pass = checkPassword(form.get('pass'), $('#pass'), 'password', 6);
     const confirmPass = checkConfirmPassword(form.get('confirm_pass'), form.get('pass'), $('#confirm_pass'), 'confirm password');
     const email = checkEmail(form.get('email'), $('#email'), 'email');
-    const name = checkName(form.get('name'), $('#name'), 'name');
+    // const name = checkName(form.get('name'), $('#name'), 'name');
 
-    return (confirmPass && login && pass && email && name);
+    // return (confirmPass && login && pass && email && name);
+    return (confirmPass && login && pass && email);
 }
 
 function checkErrors(errors) {
@@ -107,9 +108,9 @@ function checkErrors(errors) {
     if (errors['email']) {
         message($('#email'), errors['email']);
     }
-    if (errors['name']) {
-        message($('#name'), errors['name']);
-    }
+    // if (errors['name']) {
+    //     message($('#name'), errors['name']);
+    // }
 }
 
 function checkUser(form) {
