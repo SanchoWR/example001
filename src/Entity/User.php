@@ -9,17 +9,20 @@ class User
     const PASSWORD = 'password';
     const CONFIRM_PASSWORD = 'confirm_password';
     const EMAIL = 'email';
+    const NAME = 'name';
 
     private $username;
     private $password;
     private $confirmPassword;
     private $email;
+    private $name;
 
-    public function __construct(string $username = '', string $password = '', string $email = '')
+    public function __construct(string $username = '', string $password = '', string $email = '', string $name = '')
     {
         $this->username = $username;
         $this->password = $password;
         $this->email = $email;
+        $this->name = $name;
     }
 
     public function getUsername(): string
@@ -62,6 +65,16 @@ class User
         $this->email = $email;
     }
 
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
     public static function createFromArray(array $data): self
     {
         return new static($data[self::USERNAME], $data[self::PASSWORD], $data[self::EMAIL], $data[self::NAME]);
@@ -73,6 +86,7 @@ class User
             self::USERNAME => $this->username,
             self::PASSWORD => $this->password,
             self::EMAIL => $this->email,
+            self::NAME => $this->name
         ];
     }
 }
