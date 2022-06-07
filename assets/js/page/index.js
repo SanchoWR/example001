@@ -54,7 +54,7 @@ function login(form) {
 
 function hello() {
     if (user) {
-        $('#hello').text('Hello, ' + user.name + '!');
+        $('#hello').text('Hello, ' + user.username + '!');
         $('#logout').append("<a href=\"/logout\" class=\"btn\">Logout</a>");
     } else {
         $('#logout').append("<a href=\"/login\" class=\"btn\">Login</a>");
