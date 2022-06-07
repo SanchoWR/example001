@@ -91,7 +91,8 @@ function validate(form) {
     const email = checkEmail(form.get('email'), $('#email'), 'email');
     // const name = checkName(form.get('name'), $('#name'), 'name');
 
-    return (confirmPass && login && pass && email && name);
+    // return (confirmPass && login && pass && email && name);
+    return (confirmPass && login && pass && email);
 }
 
 function checkErrors(errors) {
