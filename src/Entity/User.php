@@ -62,16 +62,6 @@ class User
         $this->email = $email;
     }
 
-//    public function getName(): string
-//    {
-//        return $this->name;
-//    }
-//
-//    public function setName(string $name): void
-//    {
-//        $this->name = $name;
-//    }
-
     public static function createFromArray(array $data): self
     {
         return new static($data[self::USERNAME], $data[self::PASSWORD], $data[self::EMAIL]);
