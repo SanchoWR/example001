@@ -48,9 +48,9 @@ class SecurityController extends BaseController
             $pass = $request->getRequest()->get('pass');
             $confirmPass = $request->getRequest()->get('confirm_pass');
             $email = $request->getRequest()->get('email');
-            $name = $request->getRequest()->get('name');
+//            $name = $request->getRequest()->get('name');
 
-            $user = new User($login, $pass, $email, $name);
+            $user = new User($login, $pass, $email);
             $user->setConfirmPassword($confirmPass);
 
             $errors = $this->validator->validate($user);
